@@ -1,0 +1,228 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+}
+
+.navigation__bar {
+    background-color: rgba(43, 179, 189, 0.842);
+    width: 100%;
+    height: 80px;
+}
+
+label.logo {
+    color: whitesmoke;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+
+.list {
+    float: right;
+    margin-right: 20px;
+} 
+
+.points {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0, 5px;
+}
+
+.navbtn {
+    color: whitesmoke;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+.navbtn:hover{
+    background: #2d6f96;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+.checkbtn {
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+svg {
+    width: 48px;
+    height: 48px;
+    margin-top: 16px;
+    visibility: hidden;
+}
+
+.check {
+    position: absolute;
+    clip: rect(0, 0, 0, 0); 
+}
+
+@media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    .points {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn {
+        display: block;
+    }
+     svg {
+        visibility: visible;
+     }
+
+    .list {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #42566b;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .points {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    .navbtn {
+        font-size: 20px;
+    }
+
+    .navbtn:hover {
+        background: none;
+        color: rgba(43, 179, 189, 0.842);
+    }
+
+    #check:checked ~ .list {
+        left: 0;
+    }
+}
+
+
+               /*Для собаки*/
+
+.sobaka {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(12, 12, 12, 0.8);
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+}
+
+.sobaka:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sobaka:target .sobaka__content {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+.sobaka__body {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 30px 10px;
+}
+
+.sobaka__content {
+    max-width: 800px;
+    padding: 30px;
+    position: relative;
+    transition: all 0.5s ease 0s; 
+    opacity: 0;
+    transform: translate(-100%, 0px )
+}
+
+.sobaka__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 30px;
+    color: rgb(0, 100, 100);
+}
+
+.sobaka__title {
+    font-size: 40px;
+    margin: 0px 0px 1em 0px;
+}
+
+.sobaka__area {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.sobaka__text {}
+
+.sobaker {}
+
+
+#sector {
+    position: fixed;
+    margin-top: 50px;
+    right: 10px;
+}
+
+._container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10px;
+}
+
+button {
+    height: 100px;
+    width: 100px;
+    background-color:rgba(43, 179, 189, 0.842);
+    border-radius: 20px;
+    font-size: 1.25em;
+}
+
+button:hover {
+    background-color: #2d6f96;
+    cursor: pointer;
+}
+
+              /*media*/
+
+
+

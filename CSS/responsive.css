@@ -1,0 +1,49 @@
+@media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    .points {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn {
+        display: block;
+    }
+     svg {
+        visibility: visible;
+     }
+
+    .list {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #42566b;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .points {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    .navbtn {
+        font-size: 20px;
+    }
+
+    .navbtn:hover {
+        background: none;
+        color: rgba(43, 179, 189, 0.842);
+    }
+
+    #check:checked ~ .list {
+        left: 0;
+    }
+}
