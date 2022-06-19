@@ -4,11 +4,65 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="./CSS/stylesheet.css" rel="stylesheet">
-        <link href="./Images/Sobaka(1).png" rel="images">
     </head>
     <body>
+        <header id="header"></header>
         <nav class="navigation__bar">
-            <input type="checkbox" id="check">
+            <input type="checkbox" name="hooly" id="_check">
+            <label for="_check" class="hooly_popup">
+                <img class="ppbtn" src="./Images/popup-button.png" alt="popup__button" />
+            </label>
+            <ul class="container">
+                <li class="search icons">
+                    <img src="./Images/search.png" alt="search__icon" class="icon" />Поиск 
+                </li>
+
+                <li class="calendar icons">
+                    <img src="./Images/calendar.png" alt="calendar__icon" class="icon" />Календарь
+                </li>
+
+                <li class="app icons">
+                    <img src="./Images/apps.png" alt="app__icon" class="icon" />Приложения
+                </li>
+
+                <li class="blogs icons">
+                    <img src="./Images/blogs.png" alt="blogs__icon" class="icon" />Блог
+                </li>
+
+                <li class="chat icons">
+                    <img src="./Images/chat.png" alt="chat__icon" class="icon" />Чат
+                </li>
+
+                <li class="classroom icons">
+                    <img src="./Images/classroom.png" alt="classroom__icon" class="icon" />Класс
+                </dli>
+
+                <li class="contacts icons">
+                    <img src="./Images/contacts.png" alt="contacts__icon" class="icon" />Контакты
+                </li>
+
+                <li class="documents icons">
+                    <img src="./Images/documents.png" alt="documents__icon" class="icon" />Документы
+                </li>
+
+                <li class="files icons">
+                    <img src="./Images/files.png" alt="files__icon" class="icon" />Файлы
+                </li>
+
+                <li class="mail icons">
+                    <img src="./Images/mail.png" alt="mail__icon" class="icon" />Почта
+                </li>
+
+                <li class="maps icons">
+                    <img src="./Images/maps.png" alt="maps__icon" class="icon" />Карта
+                </li>
+
+                <li class="mars icons">
+                    <img src="./Images/mars.png" alt="mars__icon" class="icon" />Марс
+                </li>
+            </ul>
+
+            <input type="checkbox" id="check" checked>
             <label for="check" class="checkbtn">
                 <svg viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"><g id="_icons"><path d="M5 7h14c.6 0 1-.4 1-1s-.4-1-1-1H5c-.6 0-1 .4-1 1s.4 1 1 1zM5 13h14c.6 0 1-.4 1-1s-.4-1-1-1H5c-.6 0-1 .4-1 1s.4 1 1 1zM5 19h14c.6 0 1-.4 1-1s-.4-1-1-1H5c-.6 0-1 .4-1 1s.4 1 1 1z" fill="#e6effa" class="fill-000000"/></g></svg>
             </label>
@@ -21,21 +75,19 @@
                 <li class="points"><a class="navbtn" href="#">Фидбэк</a></li>
             </ul>
         </nav>
-        <header id="header"></header>
-        <sector id="sector" class="sector lock-padding">
-            <div class="sector__container _container">
+        <div id="sector" class="sector lock-padding">
+            <div class="_container">
                 <a href="" class="sobaka__logo"></a>
-                <a href="#sobaka" class="popup__link"><button>Свистни!</button></a>
+                <a href="#sobaka" class="popup__link"><button>Свистни</button></a>
             </div>
-        </sector>
+        </div>
         <div id="sobaka"  class="sobaka">
             <a href="#header" class="sobaka__area"></a>
                 <div class="sobaka__body">
                     <div class="sobaka__content">
                     <img src="./Images/Sobaka(1).png" rel="doggy" class="sobaker">
-                        <a href="#" class="sobaka__close"></a>
+                        <a href="#" class="sobaka__close">Close</a>
                     <div class="sobaka__title"></div>
-                    <div class="sobaka__text">hello</div>
             </div>
           </div>
         </div>

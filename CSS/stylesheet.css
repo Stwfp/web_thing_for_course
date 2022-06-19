@@ -1,17 +1,54 @@
 * {
     padding: 0;
     margin: 0;
+    border: 0;
     list-style: none;
     text-decoration: none;
+}
+
+*,*:before,*:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
+:focus,:active {outline: none;}
+a:focus,a:active {outline: none;}
+
+nav,footer,header,aside {display: block;}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {font-family: inherit;}
+
+input::-ms-clear {display: none;}
+button {cursor: pointer;}
+button::-moz-focus-inner{padding: 0; border: 0;}
+a, a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1, h2, h3, h4, h5, h6 {font-size: inherit; font-weight: 400;}
+
+
+
 body {
     font-family: monospace;
+    background-color: rgb(219, 219, 219);
 }
 
 .navigation__bar {
-    background-color: rgba(43, 179, 189, 0.842);
+    position: fixed;
+    background-color: rgb(43, 179, 189);
     width: 100%;
     height: 80px;
 }
@@ -20,8 +57,8 @@ label.logo {
     color: whitesmoke;
     font-size: 35px;
     line-height: 80px;
-    padding: 0 100px;
     font-weight: bold;
+    padding-left: 50px;
 }
 
 
@@ -54,9 +91,18 @@ label.logo {
 .checkbtn {
     float: right;
     line-height: 80px;
-    margin-right: 40px;
+    margin: 16px 16px;
     cursor: pointer;
     display: none;
+    width: 48px;
+    height: 48px;
+}
+
+.checkbtn:hover {
+    background-color: #2d6f96b7;
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 6px;
 }
 
 #check {
@@ -66,7 +112,6 @@ label.logo {
 svg {
     width: 48px;
     height: 48px;
-    margin-top: 16px;
     visibility: hidden;
 }
 
@@ -75,7 +120,94 @@ svg {
     clip: rect(0, 0, 0, 0); 
 }
 
-@media (max-width: 952px){
+
+
+label.hooly_popup {
+    position: relative;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 80px;
+    margin: 16px 40px 0px 0px;
+    width: 48px;
+    height: 48px;
+}
+
+.ppbtn {
+    height: 48px;
+    width: 48px;
+    cursor: pointer;
+}
+
+label.hooly_popup:hover {
+    background: #2d6f96b7;
+    transition: 0.5s;
+    border-radius: 6px;
+}
+
+
+#_check {
+        position: absolute;
+        clip: rect(0, 0, 0, 0); 
+    }
+
+.container {
+    background-color:rgba(43, 179, 189, 0.473);
+    width: 420px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin: 80px 20px 15px 15px;
+    right: 20px;
+    position: fixed;
+    top: -100%;
+    transition: all 0.5s;
+}
+
+#_check:checked ~ .container {
+    top: 0;
+}
+
+#_check:checked ~ label.hooly_popup {
+    background: #2d6f96b7;
+    transition: 0.5s;
+    border-radius: 6px;
+}
+
+.icons {
+    width: 90px;
+    height: 120px;
+    display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    font-family: monospace;
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+
+
+.icons:hover {
+    background-color: #2d6f96b7;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.icon {
+    width: 100%;
+    padding: 12px;
+    outline: none;
+}
+
+
+@media (max-width: 950px){
     label.logo{
         font-size: 30px;
         padding-left: 50px;
@@ -84,15 +216,17 @@ svg {
     .points {
         font-size: 16px;
     }
+
 }
 
-@media (max-width: 858px){
+@media (max-width: 850px){
     .checkbtn {
         display: block;
     }
-     svg {
+
+    svg {
         visibility: visible;
-     }
+    }
 
     .list {
         position: fixed;
@@ -108,7 +242,7 @@ svg {
     .points {
         display: block;
         margin: 50px 0;
-        line-height: 30px;
+        line-height: 40px;
     }
 
     .navbtn {
@@ -117,13 +251,37 @@ svg {
 
     .navbtn:hover {
         background: none;
-        color: rgba(43, 179, 189, 0.842);
+        color: rgb(43, 179, 189);
     }
 
     #check:checked ~ .list {
         left: 0;
     }
 }
+
+@media (max-width:560px){
+    ._container {
+        visibility: hidden;
+    }
+
+    .container{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .icons {
+        width: 15vh;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+
+
+
+
 
 
                /*Для собаки*/
@@ -137,8 +295,6 @@ svg {
     top: 0;
     opacity: 0;
     visibility: hidden;
-    overflow-y: auto;
-    overflow-x: hidden;
     transition: all 0.5s ease 0s;
 }
 
@@ -161,7 +317,8 @@ svg {
 }
 
 .sobaka__content {
-    max-width: 800px;
+    width: 360px;
+    height: 450px;
     padding: 30px;
     position: relative;
     transition: all 0.5s ease 0s; 
@@ -189,40 +346,30 @@ svg {
     top: 0;
     left: 0;
 }
-.sobaka__text {}
-
-.sobaker {}
-
-
-#sector {
-    position: fixed;
-    margin-top: 50px;
-    right: 10px;
-}
 
 ._container {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 10px;
+    float: right;
+    position: fixed;
+    height: 100px;
+    width: 100px;
+    bottom: 10px;
+    top: 400px;
 }
 
 button {
     height: 100px;
     width: 100px;
-    background-color:rgba(43, 179, 189, 0.842);
+    background-color:rgb(43, 179, 189);
     border-radius: 20px;
     font-size: 1.25em;
+    font-family: monospace;
+    color: whitesmoke;
+    text-transform: uppercase;
 }
 
 button:hover {
-    background-color: #2d6f96;
+    background-color: rgb(0, 100, 100);
     cursor: pointer;
 }
 
-              /*media*/
-
-
-
+              /*Hooly Pop-up*/
